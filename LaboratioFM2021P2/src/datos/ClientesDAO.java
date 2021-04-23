@@ -27,6 +27,12 @@ public class ClientesDAO {
     private static final String SQL_DELETE = "DELETE FROM tbl_cliente WHERE PK_id_cliente=?";
     private static final String SQL_QUERY = "SELECT PK_id_cliente, nombre_cliente, apellido_cliente, edad_cliente, CodigoCorreo_cliente, CodigoDireccion_cliente, CodigoTelefono_cliente, DPI_cliente FROM tbl_cliente WHERE PK_id_cliente = ?";
 
+    
+    
+    
+    
+    
+    
     public List<Clientes> select() {
         Connection conn = null;
         PreparedStatement stmt = null;
