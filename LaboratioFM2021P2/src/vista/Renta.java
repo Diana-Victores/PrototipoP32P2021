@@ -309,7 +309,6 @@ public class Renta extends javax.swing.JInternalFrame {
         JOptionPane.showMessageDialog(null, "Modificación Exitosa.");
         llenadoDeTablas();
         limpiar();
-
         // TODO add your handling code here:
     }//GEN-LAST:event_btnModificarActionPerformed
 
