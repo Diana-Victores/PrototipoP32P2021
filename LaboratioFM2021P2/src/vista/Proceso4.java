@@ -30,9 +30,7 @@ public class Proceso4 extends javax.swing.JInternalFrame {
         modelo.addColumn("GENERO");
         modelo.addColumn("FECHA ALQUILER");
         modelo.addColumn("FECHA ENTREGA TARDE");
-
         Requerimiento4DAO proveedorDAO = new Requerimiento4DAO();
-
         List<Requerimiento4> proveedor = proveedorDAO.select();
         txt_tabla.setModel(modelo);
         String[] dato = new String[9];
