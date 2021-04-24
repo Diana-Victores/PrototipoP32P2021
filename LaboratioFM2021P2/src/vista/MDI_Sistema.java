@@ -27,21 +27,111 @@ public class MDI_Sistema extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        mcliente = new javax.swing.JRadioButtonMenuItem();
+        mrenta = new javax.swing.JRadioButtonMenuItem();
+        proceso = new javax.swing.JRadioButtonMenuItem();
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 589, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 417, Short.MAX_VALUE)
+        );
+
+        jMenu1.setText("Inicio");
+
+        jRadioButtonMenuItem2.setSelected(true);
+        jRadioButtonMenuItem2.setText("Mantenimiento Renta");
+        jMenu1.add(jRadioButtonMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Catalogo");
+
+        mcliente.setSelected(true);
+        mcliente.setText("Mantenimientos Cliente");
+        mcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mclienteActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mcliente);
+
+        mrenta.setSelected(true);
+        mrenta.setText("Mantenimineto Renta");
+        mrenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mrentaActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mrenta);
+
+        proceso.setSelected(true);
+        proceso.setText("Proceso");
+        proceso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                procesoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(proceso);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDesktopPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 45, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mclienteActionPerformed
+        // TODO add your handling code here:
+        ManteniminetoCliente frm_mantusu = new ManteniminetoCliente();
+        frm_mantusu.setVisible(true);
+
+                
+    }//GEN-LAST:event_mclienteActionPerformed
+
+    private void mrentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mrentaActionPerformed
+        // TODO add your handling code here:
+         Renta frm_mantusu = new Renta();
+        frm_mantusu.setVisible(true);
+    }//GEN-LAST:event_mrentaActionPerformed
+
+    private void procesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procesoActionPerformed
+        // TODO add your handling code here:
+        Proceso4 frm_mantusu = new Proceso4();
+        frm_mantusu.setVisible(true);
+    }//GEN-LAST:event_procesoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +169,14 @@ public class MDI_Sistema extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2;
+    private javax.swing.JRadioButtonMenuItem mcliente;
+    private javax.swing.JRadioButtonMenuItem mrenta;
+    private javax.swing.JRadioButtonMenuItem proceso;
     // End of variables declaration//GEN-END:variables
 }
