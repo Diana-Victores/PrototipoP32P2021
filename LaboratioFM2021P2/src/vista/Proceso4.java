@@ -20,7 +20,7 @@ public class Proceso4 extends javax.swing.JInternalFrame {
     /**
      * Creates new form Proceso4
      */
-     public void llenadoDeTablas() {
+    public void llenadoDeTablas() {
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("ID");
         modelo.addColumn("nombre");
@@ -30,9 +30,9 @@ public class Proceso4 extends javax.swing.JInternalFrame {
         modelo.addColumn("GENERO");
         modelo.addColumn("FECHA ALQUILER");
         modelo.addColumn("FECHA ENTREGA TARDE");
-        
+
         Requerimiento4DAO proveedorDAO = new Requerimiento4DAO();
-        
+
         List<Requerimiento4> proveedor = proveedorDAO.select();
         txt_tabla.setModel(modelo);
         String[] dato = new String[9];
@@ -46,20 +46,18 @@ public class Proceso4 extends javax.swing.JInternalFrame {
             dato[6] = proveedor.get(i).getFechaAlquiler();
             dato[7] = proveedor.get(i).getFechaCaducidad();
             dato[8] = proveedor.get(i).getFechaTarde();
-            
-            
+
             //System.out.println("vendedor:" + vendedores);
             modelo.addRow(dato);
         }
     }
-    
-          public void buscar() {
-     Requerimiento4 proveedorAConsultar = new Requerimiento4();
-     Requerimiento4 proveedorDAO = new Requerimiento4();
+
+    public void buscar() {
+        Requerimiento4 proveedorAConsultar = new Requerimiento4();
+        Requerimiento4 proveedorDAO = new Requerimiento4();
         proveedorAConsultar.setID(Integer.parseInt(txt_1.getText()));
-        proveedorAConsultar =  proveedorDAO.query(proveedorAConsultar);
-        
-       
+        proveedorAConsultar = proveedorDAO.query(proveedorAConsultar);
+
         txt_2.setText(proveedorAConsultar.getNombre());
         txt_3.setText(proveedorAConsultar.getApellido());
         txt_4.setText(proveedorAConsultar.getDPI());
@@ -71,8 +69,9 @@ public class Proceso4 extends javax.swing.JInternalFrame {
         txt_tot2.setText(proveedorAConsultar.getImporteCargo());
         txt_tot3.setText(proveedorAConsultar.getTotal());
 
- }        
-        public void limpiar() {
+    }
+
+    public void limpiar() {
         txt_1.setText("");
         txt_2.setText("");
         txt_3.setText("");
@@ -84,10 +83,9 @@ public class Proceso4 extends javax.swing.JInternalFrame {
         txt_9.setText("");
         txt_tot2.setText("");
         txt_tot3.setText("");
-        
 
-        }
-        
+    }
+
     public Proceso4() {
         initComponents();
     }
@@ -448,7 +446,7 @@ public class Proceso4 extends javax.swing.JInternalFrame {
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         // TODO add your handling code here:
-         Requerimiento4DAO proveedorDAO = new Requerimiento4DAO();
+        Requerimiento4DAO proveedorDAO = new Requerimiento4DAO();
         Requerimiento4 proveedorAInsertar = new Requerimiento4();
         proveedorAInsertar.setID((int) Integer.parseInt(txt_1.getText()));
         proveedorAInsertar.setNombre(txt_2.getText());
@@ -462,15 +460,15 @@ public class Proceso4 extends javax.swing.JInternalFrame {
         proveedorAInsertar.setImporteCargo(txt_tot2.getText());
         proveedorAInsertar.setTotal(txt_tot3.getText());
         proveedorDAO.insert(proveedorAInsertar);
-        
+
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         // TODO add your handling code here:
-         Requerimiento4DAO proveedorDAO = new Requerimiento4DAO();
-       Requerimiento4 proveedorAActualizar = new Requerimiento4();
+        Requerimiento4DAO proveedorDAO = new Requerimiento4DAO();
+        Requerimiento4 proveedorAActualizar = new Requerimiento4();
         proveedorAActualizar.setID(Integer.parseInt(txt_buscar.getText()));
-       proveedorAActualizar.setNombre(txt_2.getText());
+        proveedorAActualizar.setNombre(txt_2.getText());
         proveedorAActualizar.setApellido(txt_3.getText());
         proveedorAActualizar.setDPI(txt_4.getText());
         proveedorAActualizar.setTipo(txt_5.getText());
@@ -489,13 +487,13 @@ public class Proceso4 extends javax.swing.JInternalFrame {
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
         Requerimiento4DAO proveedorDAO = new Requerimiento4DAO();
-      Requerimiento4 proveedorAEliminar = new Requerimiento4();
+        Requerimiento4 proveedorAEliminar = new Requerimiento4();
         proveedorAEliminar.setID(Integer.parseInt(txt_buscar.getText()));
         proveedorDAO.delete(proveedorAEliminar);
         JOptionPane.showMessageDialog(null, "Registro Eliminado.");
         llenadoDeTablas();
         limpiar();
-        
+
     }//GEN-LAST:event_btnEliminarActionPerformed
 
 

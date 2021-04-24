@@ -10,18 +10,18 @@ package dominio;
  * @author SIPAQUE.RITA
  */
 public class Requerimiento4 {
-    
+
     private int ID;
-   private String Nombre; 
-   private String Apellido;
-   private String DPI;
-   private String Tipo;
-   private String Genero;
-   private String FechaAlquiler; 
-   private String FechaCaducidad; 
-   private String FechaTarde;
-   private String ImporteCargo;
-   private String total; 
+    private String Nombre;
+    private String Apellido;
+    private String DPI;
+    private String Tipo;
+    private String Genero;
+    private String FechaAlquiler;
+    private String FechaCaducidad;
+    private String FechaTarde;
+    private String ImporteCargo;
+    private String total;
 
     public int getID() {
         return ID;
@@ -120,10 +120,4 @@ public class Requerimiento4 {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
-
-
- 
- 
-    
 }
